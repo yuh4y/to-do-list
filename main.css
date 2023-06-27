@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+    color: #fff;
+    background: #54b747;
+}
+
+body{
+    background-color: #86e679;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 500px;
+    padding: 28px 0 30px;
+    margin: 80px auto;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* task input */
+
+.task-input{
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.task-input input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 20px 0 53px;
+    border: 1px solid #999;
+}
+
+.task-input i{
+    position: absolute;
+    top: 9px;
+    left: 40px;
+    color: #c4c4c4;
+    font-size: 30px;
+}
+
+.task-input input:focus,
+.task-input input:active{
+    padding-left: 52px;
+    border: 2px solid #54b747;
+}
+
+.task-input input:focus + i{
+    color: #54b747;
+}
+
+.task-input input::placeholder{
+    color: #bfbfbf;
+}
+
+/* controls */
+
+.controls, li,label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls, filters{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filters span{
+    cursor: pointer;
+    color: #4d4c4c;
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+.filters span:hover{
+    color: #54b747;
+}
+
+.clear-btn{
+    width: 25%;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #72cf65,#54b746);
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.clear-btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.filters span.active{
+    color: #54b747;
+}
+
+/* task box  */
+
+.task-box{
+    margin: 20px 25px;
+}
+
+.task{
+    padding: 10px 20px;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.task p.checked{
+    text-decoration: line-through;
+}
+
+.content{
+    margin-left : 20px;
+}
+
+.task-menu{
+    display: none;
+}
+
+.task-menu li{
+    margin-left: 10px;
+    scale: 1.2;
+}
+
+.task:hover,
+.task label:hover,
+.task .setting:hover{
+    cursor: pointer;
+    .task-menu{
+        display: flex;
+    }
+}
